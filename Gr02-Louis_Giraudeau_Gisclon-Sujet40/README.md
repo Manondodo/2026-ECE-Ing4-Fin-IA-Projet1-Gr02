@@ -1,4 +1,4 @@
-# Optimisation de Portefeuille sous Contraintes Pratiques (MILP & CSP)
+# Optimisation de Portefeuille sous Contraintes Pratiques (MILP & CSP) - Arthur Louis / Manon Giraudeau / Noam Gisclon
 
 ## Présentation du projet
 
