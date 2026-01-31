@@ -290,7 +290,3 @@ python main.py --tickers "AAPL,MSFT,AMZN" --start "2024-01-01" --end "2026-01-31
 | `data_utils.py` | Utilitaires données (robuste, erreurs gérées) |
 
 ---
-
-**Créé le**: 30 janvier 2026  
-**État**: Production-ready ✅  
-**Dernière mise à jour**: 31 janvier 2026
