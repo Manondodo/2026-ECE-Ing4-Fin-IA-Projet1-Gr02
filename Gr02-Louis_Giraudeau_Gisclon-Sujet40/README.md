@@ -93,7 +93,7 @@ Gr02-Louis_Giraudeau_Gisclon-Sujet40
 │
 ├── README.md                   # Ce fichier
 ├── src/
-│ ├── requirements.txt # Bibliothèques
+│ ├── requirements.md # Bibliothèques utilisées
 │ ├── main.py # Script principal d’exécution
 │ ├── optimizer.py # Cœur : formulation MILP + solveur OR-Tools
 │ ├── data_utils.py # Téléchargement données, chargement CSV, utilitaires
