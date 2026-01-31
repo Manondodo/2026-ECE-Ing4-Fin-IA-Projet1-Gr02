@@ -50,4 +50,14 @@ Le risque est modélisé à l’aide de :
 ---
 
 ## Structure du dépôt
+Gr02-Louis_Giraudeau_Gisclon-Sujet40/
+├── README.md
+├── src/
+│ ├── main.py # Script principal d’exécution
+│ ├── optimizer.py # Modèles d’optimisation (Markowitz, MILP, CSP)
+│ ├── data_utils.py # Chargement et prétraitement des données financières
+│ └── gui_steamlt_v2.py # Interface utilisateur (Streamlit)
+├── docs/ # Documentation technique et théorique
+├── slides/ # Support de présentation
+
 
