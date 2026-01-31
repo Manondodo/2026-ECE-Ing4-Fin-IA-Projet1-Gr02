@@ -1,4 +1,8 @@
-# 📊 Portfolio Optimizer — MILP + CVaR
+# 📊 Optimisation de Portefeuille sous Contraintes Pratiques (MILP & CSP)
+
+Arthur Louis / Manon Giraudeau / Noam Gisclon
+
+---
 
 ## Vue d'ensemble
 
@@ -8,7 +12,36 @@ L'interface permet à un professionnel de prendre des décisions d'optimisation 
 
 ---
 
-## 🔍 Comment j'ai réfléchi pour construire ce projet
+## Contraintes prises en compte
+
+Les contraintes pratiques suivantes sont modélisées :
+
+- **Contrainte de cardinalité** : nombre maximal d’actifs dans le portefeuille
+- **Contraintes de diversification sectorielle**
+- **Coûts de transaction et rééquilibrage du portefeuille**
+- **Portefeuilles long-only**
+- **Contrainte de budget**
+
+Le risque est modélisé à l’aide de :
+- l’optimisation moyenne–variance (Markowitz, baseline)
+- extensions vers des mesures de risque de type **CVaR / drawdown**
+
+---
+
+## Technologies utilisées
+
+- Python  
+- Gurobi (optimisation MILP / MIQP)  
+- OR-Tools (formulation CSP)  
+- cvxpy (optimisation convexe)  
+- pandas, numpy  
+- yfinance (données financières)  
+- matplotlib / plotly (visualisation)  
+- pytest (tests automatisés)  
+
+---
+
+## 🔍 Comment avons-nous réfléchi pour construire ce projet
 
 ### **Étape 1 : Diagnostic initial**
 - **Problème trouvé** : Le script `main.py` nécessitait `--tickers` obligatoire mais ne compilait pas sans dépendances.
@@ -56,22 +89,20 @@ L'interface permet à un professionnel de prendre des décisions d'optimisation 
 ## 📦 Architecture du projet
 
 ```
-Projet IA 40 (workspace)
-│
-├── .venv/                      # Environnement virtuel Python
-├── requirements.txt            # Dépendances (pandas, yfinance, ortools, streamlit, numpy, scipy)
-│
-├── main.py                     # CLI classique (argument parser)
-│
-├── gui_streamlit.py            # UI web Streamlit v1 (simple)
-├── gui_streamlit_v2.py         # UI web Streamlit v2 (riche, presets, exports)
-├── gui_desktop.py              # UI desktop Tkinter (local, pas Internet)
-│
-├── optimizer.py                # Cœur : formulation MILP + solveur OR-Tools
-├── data_utils.py               # Téléchargement données, chargement CSV, utilitaires
+Gr02-Louis_Giraudeau_Gisclon-Sujet40
 │
 ├── README.md                   # Ce fichier
-└── LICENSE                     # Licence du projet
+├── src/
+│ ├── requirements.txt # Bibliothèques
+│ ├── main.py # Script principal d’exécution
+│ ├── optimizer.py # Cœur : formulation MILP + solveur OR-Tools
+│ ├── data_utils.py # Téléchargement données, chargement CSV, utilitaires
+│ ├── gui_desktop.py # UI desktop Tkinter (local, pas Internet)
+│ └── gui_steamlt_v2.py # UI web Streamlit v2 (riche, presets, exports)
+├── docs/ # Documentation technique et théorique
+├── slides/ # Support de présentation
+│
+
 ```
 
 ### **Modules clés**
