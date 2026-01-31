@@ -1,11 +1,16 @@
 # Optimisation de Portefeuille sous Contraintes Pratiques (MILP & CSP)
 
+Arthur Louis / Manon Giraudeau / Noam Gisclon
+
+---
+
 ## Présentation du projet
 
-Ce projet s’intéresse aux limites de l’optimisation de portefeuille classique
-de Markowitz, qui ne prend pas en compte les contraintes pratiques rencontrées
-en gestion de portefeuille réelle.  
-Nous formulons le problème d’optimisation comme un problème combinatoire et le
+Ce projet étudie les limites de l’optimisation de portefeuille classique de Markowitz,
+qui ne prend pas en compte les contraintes pratiques rencontrées en gestion de
+portefeuille réelle.
+
+Nous formulons le problème comme un problème d’optimisation combinatoire et le
 résolvons à l’aide de la **programmation linéaire mixte en nombres entiers (MILP)**
 et de la **programmation par contraintes (CSP)**.
 
@@ -33,14 +38,14 @@ Le risque est modélisé à l’aide de :
 
 ## Technologies utilisées
 
-- **Python**
-- **Gurobi** (optimisation MILP / MIQP)
-- **OR-Tools** (formulation CSP)
-- **cvxpy** (optimisation convexe)
-- **pandas**, **numpy**
-- **yfinance** (données financières)
-- **matplotlib / plotly** (visualisation)
-- **pytest** (tests automatisés)
+- Python  
+- Gurobi (optimisation MILP / MIQP)  
+- OR-Tools (formulation CSP)  
+- cvxpy (optimisation convexe)  
+- pandas, numpy  
+- yfinance (données financières)  
+- matplotlib / plotly (visualisation)  
+- pytest (tests automatisés)  
 
 ---
 
